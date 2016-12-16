@@ -20,6 +20,8 @@ all : $(TOKENIZER_BIN) $(MATCHER_BIN)
 	
 clean: 
 	rm $(TOKENIZER_BIN) $(MATCHER_BIN) $(C_OBJS) $(MATCHER_OBJS)
+	rmdir $(OBJDIR)
+	rmdir $(BINDIR)
 
 $(MATCHER_BIN): $(MATCHER_OBJS)
 	@mkdir -p $(dir $@)
