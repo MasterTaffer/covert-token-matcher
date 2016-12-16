@@ -19,7 +19,7 @@ MATCHER_BIN := $(BINDIR)matcher
 all : $(TOKENIZER_BIN) $(MATCHER_BIN)
 	
 clean: 
-	rm -rf tokenizer matcher $(BINDIR) $(OBJDIR)
+	rm $(TOKENIZER_BIN) $(MATCHER_BIN) $(C_OBJS) $(MATCHER_OBJS)
 
 $(MATCHER_BIN): $(MATCHER_OBJS)
 	@mkdir -p $(dir $@)
