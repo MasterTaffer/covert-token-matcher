@@ -111,3 +111,8 @@ enum CovertMatchResult
  *      CovertMatchResult_Error if there was an error in the match string
  */
 int CovertMatchAtBegin(const char* string, const char* matcher, unsigned* length);
+
+/*
+ *  Same as above, but denote the match string range (matcher - end)
+ */
+int CovertMatchBlock(const char* string, const char* matcher, const char* end, unsigned* length);

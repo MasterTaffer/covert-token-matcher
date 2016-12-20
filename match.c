@@ -1,7 +1,8 @@
 #include "match.h"
 
 
-static int CovertMatchBlock(const char* string, const char* matcher, const char* end, unsigned* length);
+int CovertMatchBlock(const char* string, const char* matcher, const char* end, unsigned* length);
+
 static int I_CovertFindMatchingPar(const char* start, const char* end)
 {
     //Returns negative on failure, otherwise returns the offset of the closing
@@ -223,7 +224,7 @@ static int CovertMatchUnit(const char** at, const char** unit, const char* end)
     }
 }
 
-static int CovertMatchBlock(const char* string, const char* matcher, const char* end, unsigned* length)
+int CovertMatchBlock(const char* string, const char* matcher, const char* end, unsigned* length)
 {
     //The algorithm will go through the match string, even if
     //the match has failed. The reason for this is the OR cases

@@ -1,11 +1,13 @@
 #pragma once
 
-typedef struct
+struct _CovertToken
 {
     const char* begin;
     unsigned length;
     unsigned type;
-} CovertToken;
+};
+
+typedef struct _CovertToken CovertToken;
 
 
 enum CovertTokenResult
